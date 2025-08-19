@@ -227,7 +227,7 @@ else{
 
 
             let i1 = 1
-            console.log(i1++ + ++i1 + --i1 + --i1 - i1-- );//
+            console.log(i1++ + ++i1 + --i1 + --i1 - i1-- );
             console.log(--i1);
 
 
@@ -257,3 +257,11 @@ let b4 = -4;
 console.log(~b3);
 console.log(~b4);
 console.log(5>>2);
+
+
+ console.log(!" ");
+            console.log(!null);
+            console.log(!undefined);
+            console.log(!4);
+            console.log( 5 && "Hello");
+            console.log(false || 3 || true );
