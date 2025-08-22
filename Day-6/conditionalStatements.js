@@ -59,7 +59,50 @@ else if{
 else{
 //code if none are true
 }
+\\
+3. Switch statement
+
+for many options based on the value
+
+why:
+
+syntax:
+switch(expression){
+case value1:
+    //code
+    //break;
+case value2:
+    //code
+    //break;
+default:
+    //code
+    }
+
+how it works:
+1. the switch ebaluates the expression once
+2. it compare the result with case values
+3. if it matches--->executes that case block until a break is found
+4. if no match---> executes default block
+
+
+use cases:
+1. TV remore
+2. menu selection in applicatipn
+3. performing action based on day of the week
+
+
+Typecasting:
+converting one data type to onether dat type
+Example: converting string into a number
+
+Explicit type convertion:
+
+Number(),String(),Boolean(),parseInt(),parseFloat()
+
+
 */
+
+// const { Children } = require("react");
 
 
 let cartValue = 500;//prompt("Enter amount:");
@@ -132,3 +175,65 @@ else{
 
 
 console.log(-4%2);
+
+
+let day = "sat";
+
+switch(day){
+    case "mon":
+        console.log("Day-1");
+        break;
+        case "tue":
+        console.log("Day-2");
+        break;
+        case "wed":
+        console.log("Day-3");
+        break;
+        case "thur":
+        console.log("Day-4");
+        break;
+        case "fri":
+        console.log("Day-5");
+        break;
+        case "sat":
+        console.log("Day-6");
+        break;
+        case "sun":
+            console.log("day-7");
+            break;
+        default:
+            console.log("enter valid day");
+    
+}
+
+
+// let item = ;
+// switch(item){
+//     case 1:
+//         console.log("starters are getting ready");
+//         break;
+    
+//     case 2:
+//         console.log("main course");
+//         break;
+//     case 3:
+//         console.log("desserts");
+//         break;
+//         default:
+//         console.log("select item accornding to menu");  
+    
+// }
+
+console.log(Boolean("ww"));
+
+
+{
+    var a = 10;
+    let b = 20;
+    const c = 30;
+}
+// console.log(a,b,c);
+
+console.log(Boolean());
+
+

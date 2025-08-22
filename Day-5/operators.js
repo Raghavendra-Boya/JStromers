@@ -222,7 +222,7 @@ else{
 
 
             console.log(+"10" + 1);
-            console.log(typeof typeof 5);//typeof(typeof 5)--->typeof(Number)
+            console.log(typeof typeof 5);
             console.log(typeof typeof "5");
 
 
@@ -265,3 +265,6 @@ console.log(5>>2);
             console.log(!4);
             console.log( 5 && "Hello");
             console.log(false || 3 || true );
+
+
+console.log(Boolean("false"));
