@@ -1,0 +1,45 @@
+/*
+WHat is CSS?
+CSS is used to style and design in the HTML elements
+
+Why CSS:
+1. Makes Website beautiful and user-friendly
+2. provides the responsiveness
+3. svaes the time--->one CSS file can be applied for multiple HTML pages
+
+How CSS Works:
+1. CSS apllied in the opening tag by using Style attribute
+2. Each style written as Property:value
+
+
+whys to apply CSS:
+
+1. Inline CSS:
+    written inside the opening tag
+2. internal CSS
+
+
+*/
+
+header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      h1{
+        color: blue;
+        width: 30%;
+      }
+      nav{
+        width: 70%;
+        display: flex;
+        justify-content: space-around;
+      }
+      a{
+        text-decoration: none;
+        color: green;
+      }
+
+      h2{
+        color: black;
+      }
