@@ -70,4 +70,46 @@ function clcBill(){
 }
 
 
+//function expressions:
+
+let func = function(){
+    console.log("Hello");
+}
+func()
+
+//Use cases:
+//1. Used in Event handling
+//2. show pop up messages
+//3. adding items to wishlist
+
+let popup = function(){
+    alert("Buy 1 get 1 free on fashion items")
+}
+
+//Anonymous Function
+
+setTimeout(function(){
+    console.log("Anonymous Function");
+},1000)
+
+function greet2(name){
+    console.log("Hello" + name);
+}
+
+
+setTimeout(() => greet2("Ravi"),2000)
+
+function processingOrder(callback){
+    document.getElementById("orderStatus").innerText = "Processing your Order...."
+    // setTimeout(callback,2000)
+    callback();
+}
+
+function conformOrder(){
+    document.getElementById("orderStatus").innerText = "Order conformed!"
+}
+
+processingOrder(conformOrder)
+
+
 
