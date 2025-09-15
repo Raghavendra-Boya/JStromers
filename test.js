@@ -65,3 +65,5 @@ for(let i=0; i<stars.length;i++){
 }
 document.getElementById("ratingText").innerText = "Your Rating: "+ rating;
 }
+
+
