@@ -78,3 +78,106 @@ document.getElementById("mouseUpBtn").addEventListener("mouseup",() =>{
     console.log("mouse button Realesed");
 })
 
+
+let keyboardInput = document.getElementById("inputBox");
+keyboardInput.addEventListener("keydown",(e) =>{
+    console.log(`Key "${e.key}" pressed  down`);
+})
+
+// keyboardInput.addEventListener("keyup",(e) =>{
+//     console.log(`Key "${e.key}" released`);
+// })
+
+// keyboardInput.addEventListener("keypress",(e) =>{
+//     console.log(`Key "${e.key}" pressed`);
+// })
+
+document.getElementById("myLink").addEventListener("click",(e)=>{
+    e.preventDefault();
+    console.log("Link Clicked, but default action prevented");
+})
+
+document.getElementById("myForm").addEventListener("submit",(e)=>{
+    e.preventDefault();
+    console.log("Form Submitted");
+})
+
+document.getElementById("colorSelect").addEventListener("change",(e)=>{
+    alert("Color Selected: "+ e.target.value);
+})
+
+document.getElementById("name").addEventListener("input",(e)=>{
+    console.log("Current Input: "+ e.target.value);
+})
+
+document.getElementById("name").addEventListener("focus",(e)=>{
+    e.target.style.background = "lightblue";
+})
+
+document.getElementById("name").addEventListener("blur",(e)=>{
+    e.target.style.background = "white";
+})
+
+
+window.addEventListener("load",() =>{
+    console.log("Page fully loaded");
+})
+
+window.addEventListener("resize",() =>{
+    console.log("Window resized to "+ window.innerWidth + "x" + window.innerHeight);
+})
+
+window.addEventListener("scroll",() =>{
+    console.log("Window scrolled to "+ window.scrollY);
+})
+
+let input = document.getElementById("copyInput");
+input.addEventListener("copy",() =>{
+    alert("Content Copied from input");
+})
+
+input.addEventListener("paste",() =>{
+    alert("Content pasted to input");
+})
+
+input.addEventListener("cut",() =>{
+    alert("Content cut from input");
+})
+
+
+//Media events
+let video = document.getElementById("myVideo");
+video.addEventListener("play",() =>{
+    console.log("Video Started Playing");
+})
+video.addEventListener("pause",() =>{
+    console.log("Video Paused");
+})
+video.addEventListener("ended",() =>{
+    console.log("Video Ended");
+})
+
+document.getElementById("grandParent").addEventListener("click",() =>{
+    console.log("GrandParent Clicked");
+},)
+document.getElementById("parent").addEventListener("click",(e) =>{
+    e.stopPropagation();
+    console.log("Parent Clicked");
+})
+document.getElementById("child").addEventListener("click",(e) =>{
+    // e.stopPropagation();
+    console.log("Child Clicked");
+})
+
+
+document.getElementById("grandParent").addEventListener("click",() =>{
+    console.log("GrandParent Clicked");
+},true)
+document.getElementById("parent").addEventListener("click",(e) =>{
+    // e.stopPropagation();
+    console.log("Parent Clicked");
+},true)
+document.getElementById("child").addEventListener("click",(e) =>{
+    // e.stopPropagation();
+    console.log("Child Clicked");
+},true)
