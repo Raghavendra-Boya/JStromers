@@ -4,15 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+      <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <form  id="myForm">
+    <!-- <form  id="myForm">
     <input type="text" id="username" placeholder="Username" required><br><br>
     <input type="email" id="email" placeholder="Email" ><br><br>
     <input type="password" id="password" placeholder="Password"><br><br>
     <button type="submit">Submit</button>
     </form>
-    <p id="error"></p>
+    <p id="error"></p> -->
+
+<div class="text-center mt-10">
+    <h2 class="text-2xl font-bold">SignUp Form</h2>
+    <form action="#" id="myForm" class="space-y-4">
+
+
+<div>
+    <input type="text" id="username" placeholder="Username(min 3 Letters)" class="w-full p-2 border rounded outline-none" >
+    <div id="userError" class="error text-red-500 text-sm" ></div>
+
+    
+</div>
+<div>
+    <input type="text" id="email" placeholder="Email" class="w-full p-2 border rounded outline-none" >
+    <div id="emailError" class="error text-red-500 text-sm" ></div>
+</div>
+<div>
+    <input type="text" id="phone" placeholder="Phone(10 digits)" class="w-full p-2 border rounded outline-none" >
+    <div id="phoneError" class="error text-red-500 text-sm" ></div>
+</div>
+<div>
+    <input type="password" id="password" placeholder="Password" class="w-full p-2 border rounded outline-none" >
+    <div id="passError" class="error text-red-500 text-sm" ></div>
+</div>
+<div>
+    <input type="password" id="confirmPassword" placeholder="Confirm Password" class="w-full p-2 border rounded outline-none" >
+    <div id="confirmError" class="error text-red-500 text-sm" ></div>       
+</div>
+
+<button type="submit" class="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-600" >Register</button>
+</form>
+</div>
+
 
     <script src="./formValidation.js"></script>
 </body>
