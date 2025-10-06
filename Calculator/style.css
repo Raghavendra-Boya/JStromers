@@ -1,0 +1,96 @@
+/* Default Light Mode */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f1f1f1;
+  font-family: Arial, sans-serif;
+  transition: background 0.3s;
+}
+
+.calculator {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 260px;
+}
+
+.theme-toggle {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+#toggle-btn {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#display {
+  width: 100%;
+  height: 50px;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #eee;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 15px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #ddd;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #bbb;
+}
+
+.equal {
+  grid-column: span 2;
+  background: #4CAF50;
+  color: white;
+}
+
+.clear {
+  grid-column: span 2;
+  background: #f44336;
+  color: white;
+}
+
+/* Dark Mode */
+body.dark {
+  background: #222;
+}
+
+body.dark .calculator {
+  background: #333;
+  color: white;
+}
+
+body.dark #display {
+  background: #555;
+  color: white;
+}
+
+body.dark button {
+  background: #666;
+  color: white;
+}
+
+body.dark button:hover {
+  background: #888;
+}
