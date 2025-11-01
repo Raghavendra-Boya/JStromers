@@ -237,3 +237,56 @@ console.log(Boolean("ww"));
 console.log(Boolean());
 
 
+/*------------------------------- */
+
+let day = "Monday";
+
+switch (day) {
+  case "Monday":
+    console.log("Start of the week");
+    break;
+  case "Friday":
+    console.log("Weekend coming!");
+    break;
+  default:
+    console.log("Mid-week day");
+}
+
+
+
+/*----------------------- */
+
+let item = "Pizza";
+
+switch (item) {
+  case "Burger":
+    console.log("You selected a Burger 🍔");
+    break;
+  case "Pizza":
+    console.log("You selected a Pizza 🍕");
+    break;
+  case "Pasta":
+    console.log("You selected a Pasta 🍝");
+    break;
+  default:
+    console.log("Item not available");
+}
+
+
+/*---------------------------------- */
+
+let seatType = "Premium";
+
+switch (seatType) {
+  case "Standard":
+    console.log("Price: ₹150");
+    break;
+  case "Premium":
+    console.log("Price: ₹250");
+    break;
+  case "VIP":
+    console.log("Price: ₹400");
+    break;
+  default:
+    console.log("Invalid seat selection");
+}

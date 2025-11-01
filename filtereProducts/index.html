@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+    <div>
+        <input type="text" id="nameFilter" placeholder="Enter product name">
+        <button id="filterByName" onclick="applyFilter()">Filter Products</button>
+    </div>
+    <div id="productContainer" class="grid grid-cols-3 gap-4"></div>
+
+    <script>
+
+
+        const products = [
+            {name: "iPhone 12", price: 999, available: true},
+            {name: "Samsung Galaxy S21", price: 799, available: false},
+            {name: "GooglePixel5", price: 699, available: true},
+            {name: "Iphone 9", price: 729, available: true},
+            {name: "Sony Galaxy 1 II", price: 1199, available: false}
+        ]
+
+        function renderProduct(list) {
+            let container = document.getElementById('productContainer');
+            container.innerHTML = '';
+            for(let i = 0; i < list.length; i++) {
+                let product = list[i];
+                let productDiv = document.createElement('div');
+                productDiv.className = 'border p-4 rounded text-center';
+                productDiv.innerHTML = `
+                    <h2 class="text-lg font-bold mb-2">${product.name}</h2>
+                    <p class="text-gray-700 mb-4">$${product.price}</p>
+                    <p class="${product.available ? 'text-green-500' : 'text-red-500'}">
+                        ${product.available ? 'In Stock' : 'Out of Stock'}
+                    </p>
+                `;
+                container.appendChild(productDiv);
+                
+            }
+        }
+        renderProduct(products);
+
+        function applyFilter(){
+            let nameFilter = document.getElementById('nameFilter').value.toLowerCase();
+           let filtered = products;
+           if(nameFilter) {
+                filtered = filtered.filter(p => p.name.toLowerCase().includes(nameFilter));
+           }
+              renderProduct(filtered);
+        }
+
+
+    </script>
+</body>
+</html>
